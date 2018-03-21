@@ -1,0 +1,79 @@
+.header{
+    height: 2em;
+    background: #81e6f3;
+    line-height: 2em;
+    font-size: 1.5em;
+    /* box-sizing: border-box; */
+}
+.header span{
+    color: white;    
+}
+.name{
+    height: 2em;
+    line-height: 2em;
+    margin:2% 0;
+    margin-top: 5.5em;
+    text-align: center;
+    box-shadow: slategrey 1px 1px 1px ;
+}
+.players{
+    height: 10em;
+    box-shadow: slategrey 1px 1px 1px;
+}
+.players .killer{
+    float: left;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+.players .normal{
+    float: right;
+    margin-top: 1em;
+    margin-right: 2em;
+}
+.killer span,p{
+    display: inline;
+}
+.more{
+    height: 6em;
+    box-shadow: slategrey 1px 1px 1px;
+    margin-top: 1em;
+}
+.typeIn{
+    height: 8em;
+     box-shadow: slategrey 1px 1px 1px;
+     margin-top: 1em;
+     padding: 2em;
+     text-align: center;
+}
+.typeIn .num{
+    font-size: 1em;
+    font-weight: 600;
+}
+.typeIn .limit{
+    font-size:0.27em;
+    color: sandybrown;
+}
+.typeIn input{
+    width: 2em;
+}
+.go{
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background: sandybrown;
+}
+.go p{
+    color: white;
+    font-size: 1.7em;
+}
+.new{
+    border: sandybrown!important; 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
