@@ -17,27 +17,46 @@
 <body>
     <div class="container-fluid">
         <div class="header navbar-fixed-top">
-            <span class="glyphicon glyphicon-menu-left"></span>
+            <img src="素材/back.png" alt="" class="back"> 参数设置
+            <img src="素材/help.png" alt="" class="help">
         </div>
+
         <div class="name">
-            <p>玩家配比</p>
+            <p>玩</br>家</br>配</br>比</p>
         </div>
-        <div class="content">
-            <div class="players">
-                <div class="killer">
-                    <span class="glyphicon glyphicon-user"></span>杀手
-                    <p class="changeKiller"></p>人
-                </div>
-                <div class="normal">
-                    <span class="glyphicon glyphicon-user"></span>平民
-                    <p class="changeNormal"></p>人
-                </div>
+
+        <div class="players">
+            <div class="killer">
+                <span class="glyphicon glyphicon-user"></span>杀手
+                <p class="changeKiller"></p>人
             </div>
-            <div class="more"></div>
-            <div class="typeIn">
-                <p class="num">请输入玩家数量</p>
-                <input id="input" type="number" oninput="if(value.length>2)value=value.slice(0,2)">
-                <p class="limit">玩家数量为4-18</p>
+            <div class="normal">
+                <span class="glyphicon glyphicon-user"></span>平民
+                <p class="changeNormal"></p>人
+            </div>
+        </div>
+        <div class="more">
+            点击设置
+            <img src="素材/pencil.png" alt="">
+        </div>
+        <div class="setWords">
+            <input class="citizen" type="text" placeholder=" 水民词组">
+            <input class="ghost" type="text" placeholder=" 幽灵词组">
+
+        </div>
+        <div class="typeIn">
+            <p class="num">请输入玩家数量</p>
+            <input id="input" type="number" oninput="if(value.length>2)value=value.slice(0,2)" value="">
+            <p class="limit">玩家数量为4-18</p>
+        </div>
+        <div class="control">
+            <div class="slide">
+                <span class="glyphicon glyphicon-minus-sign minus"></span>
+                <span class="glyphicon glyphicon-plus-sign plus"></span>
+
+                <div class="line">
+                    <div class="point"></div>
+                </div>
             </div>
         </div>
         <div class="footer navbar-fixed-bottom">
@@ -50,7 +69,7 @@
         <div class="modal-dialog" style="width:60%;margin:20em auto">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p>请输入正确玩家数量</p>
+                    <p class="shift">请输入正确玩家数量</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default confirm">确认</button>
