@@ -158,15 +158,19 @@ $(document).on('touchend', function () {
 $('.go').click(function () {
     var citizen = $('.citizen').val();
     var ghost = $('.ghost').val();
+    var check=true
     if (citizen.length < 6 || ghost.length<6) {
         $('.shift').html("词组不能少于6位")
         $('#myModal').modal('show');
+        check = false
     } else if (citizen.match(/\s/) || ghost.match(/\s/)) {
         $('.shift').html("词组不能有空格")
         $('#myModal').modal('show');
+        check = false
     }else if (citizen == ghost) {
         $('.shift').html("词组不能相同")
         $('#myModal').modal('show');
+        check = false
     }
 
     var typeIn = $('#input').val();
@@ -192,8 +196,10 @@ $('.go').click(function () {
         }
         var nextPage = JSON.stringify(new_num1);
         sessionStorage.setItem("key", nextPage); //把洗好的数组保存，待后面的页面取用
-
-        window.location.href = "翻牌1.html" //不是空就跳转
+        if (check) {
+             window.location.href = "翻牌1.html" //跳转
+        }
+       
 
     } else {
         $('#myModal').modal('show');
