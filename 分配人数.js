@@ -1,4 +1,12 @@
+window.onresize = function () {
+    location.reload();
+}
+$(window).load(function () {　　
+    h = $('.point').offset().left;
+});
+
 h = $('.point').offset().left;
+console.log(h)
 var newSet = function () {
     var typeIn = $('#input').val();
     var a = $('.changeKiller').html();
@@ -97,10 +105,13 @@ $('.minus').click(function () {
     newPos = new Object();
     newPos.left = $('.point').offset().left - 15;
     newPos.top = $('.point').offset().top;
-    if (newPos.left - h < 0) {
+
+    if (newPos.left < h) {
         newPos.left = h
     }//这里限制了最右端的位置
+
     $('.point').offset(newPos);
+    console.log($('.point').offset());
     typeIn--;
     if (typeIn < 4) {
         typeIn = 4
@@ -147,7 +158,6 @@ function move(event) {
     $('#input').val(s + 4);
     typeIn = s + 4;
     newSet(typeIn);
-    console.log(2);
     return false;
 };
 $(document).on('touchend', function () {
