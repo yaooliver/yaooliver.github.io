@@ -1,0 +1,128 @@
+html,page{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    margin: 0;
+    background-color: rgb(224, 226, 225)!important;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+   
+}
+.container{
+    position: relative;
+    height: 100%;
+}
+.container-fluid {
+    background: rebeccapurple;
+    
+}
+
+.header {
+    height: 3em;
+    background: #5fc0cd;
+    line-height: 3.7em;
+}
+
+.glyphicon-menu-hamburger {
+    /* height: 1.7em; */
+    /* width: 1.7em; */
+    font-size: 1.4em;
+    color: white;
+    margin-left: 0.5em;
+}
+
+.former {
+    margin-top: 4em;
+    border: 1px solid rgb(194, 190, 190);
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    position: relative;
+    background: white;
+}
+
+.former p {
+    display: inline;
+    font-size: 1.3em;
+    color: rgb(153, 150, 150);
+}
+
+.former span {
+    color: rgb(153, 150, 150);
+    font-size: 1.3em;
+    margin-right: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.6em;
+    
+}
+
+.name {
+    margin-top: 1em;
+    border: 1px solid rgb(194, 190, 190);
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    color: goldenrod;
+    border-bottom: 0.1px solid goldenrod;
+    background: white;
+}
+
+.name p {
+    font-size: 1.3em;
+}
+
+.main {
+    border: 1px solid rgb(194, 190, 190);
+    text-align: center;
+    border-top: 0.1px solid goldenrod;
+    background:white;
+    overflow: scroll;
+    bottom: 3em;
+    top:11em;
+    left: 15px;
+    right: 15px;
+    position: absolute;
+}
+.main .glyphicon-triangle-right{
+    position: absolute;
+    right: 15px;
+    font-size: 2em;
+    top:50%;
+    margin-top: -1em;
+    color: goldenrod;
+}
+.main div {
+    height: 4em;
+    background-color: #5fc0cd;
+    margin: 1em 1.5em;
+    line-height: 4em;
+    font-size: 1.5em;
+    color: white;
+}
+
+.main p {
+    font-size: 1em;
+    color: rgb(194, 190, 190);
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer div {
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    background: rgb(194, 190, 190);
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}
+.footer div:first-child{
+    background: #5fc0cd;
+}

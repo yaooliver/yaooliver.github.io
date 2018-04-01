@@ -153,7 +153,7 @@ input:-moz-placeholder {
 
 .slide {
     height: 2em;
-    width: 254px;
+    width: 274px;
     margin-top: 1em;
     margin-left: 0;
     display: inline-block;
@@ -169,19 +169,19 @@ input:-moz-placeholder {
 }
 
 .slide .point {
-    height: 14px;
-    width: 14px;
+    height: 20px;
+    width: 20px;
     background-color: sandybrown;
     border-radius: 100%;
     position: absolute;
-    top: -8px;
-    left: -7px;
+    top: -10px;
+    left: -13px;
     touch-action:none;
 }
 
 .slide span {
     color: sandybrown;
-    margin-top: 0.45em;
+    font-size: 1.5em;
 }
 
 .slide .minus {
@@ -196,8 +196,8 @@ input:-moz-placeholder {
     width: 210px;
     border: sandybrown solid 1px;
     float: left;
-    margin-top: 1em;
-    margin-left: 6px;
+    margin-top: 0.75em;
+    margin-left: 13px;
     position: relative;
 }
 

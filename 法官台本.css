@@ -1,0 +1,183 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(238, 242, 245);
+    overflow-y: scroll;
+}
+
+.header1 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background: #81e6f3;
+    border-bottom: 0.1px solid rgb(199, 229, 247);
+    z-index: 2;
+}
+
+.header1 img {
+    height: 1.5em;
+}
+
+.header1 .back1 {
+    float: left;
+    margin-top: 0.75em;
+    margin-left: 1em;
+}
+
+.header1 p {
+    display: inline;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
+.header1 .close1 {
+    float: right;
+    margin-top: 0.75em;
+    margin-right: 1em;
+}
+
+.main {
+    width: 97%;
+    margin-top: 2.5em;
+    padding: 5px;
+    margin-bottom: 3em;
+}
+
+.date {
+    height: 2em;
+    text-align: center;
+    border: rgb(218, 219, 219) solid 0.5px;
+    background: white;
+    line-height: 2em;
+    color: #81e6f3;
+    margin-top: 0.5em;
+}
+.main .trangle {
+    height: 0;
+    width: 0;
+    box-sizing: border-box;
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: relative;
+    top: -1.6em;
+    left: 50%;
+    margin-left: -20px;
+}
+.main .another{
+    background: #34595e;
+}
+
+
+.events {
+    background: white;
+    margin-top: -1.8em;
+    box-sizing: border-box;
+    padding: 1em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.events div {
+    width: 60%;
+    height: 1.5em;
+    background: #81e6f3;
+    margin-top: 1em;
+    margin-left: 34%;
+    text-align: center;
+    line-height: 1.5em;
+    color: white;
+    position: relative;
+}
+.events .shift{
+    border: none;
+    display: inline;
+}
+.events .pic {
+    display: inline-block;
+    position: absolute;
+    border: 1px solid rgb(231, 229, 229);
+    height: 12em;
+    top: 3.8em;
+    left: 3.5em;
+}
+
+.events img {
+    position: absolute;
+    height: 2em;
+    left: -4.7em;
+    top: -0.2em;
+    z-index: 1;
+}
+
+.events .trangle {
+    height: 0;
+    width: 0;
+    box-sizing: border-box;
+    border-top: 7px solid white;
+    border-left: 20px solid white;
+    border-right: 20px solid transparent;
+    border-bottom: 7px solid white;
+    position: absolute;
+    top: -11px;
+    left: -20px;
+}
+.events .border-another{
+    border-top: 7px solid white;
+    border-left: 20px solid white;
+    border-right: 20px solid #34595e;
+    border-bottom: 7px solid white;
+}
+.events .killDetail {
+    background: white;
+    display: none;
+    color: black;
+    font-size: 0.5em;
+}
+
+.events .voteDetail {
+    background: white;
+    display: none;
+    color: black;
+    font-size: 0.5em;
+}
+
+.footer {
+    height: 3em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    line-height: 2em;
+    background: #81e6f3;
+}
+
+.footer div {
+    height: 2em;
+    width: 40%;
+    background: sandybrown;
+    color: white;
+    margin-top: 0.5em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 5px;
+}
+
+.footer .footer1 {
+    float: left;
+    margin-left: 1em;
+}
+
+.footer .footer2 {
+    float: right;
+    margin-right: 1em;
+}

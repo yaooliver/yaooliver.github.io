@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+}
+
+.all {
+    background: #81e6f3;
+    margin: 0 -15px;
+}
+
+.header {
+    background: #81e6f3;
+    height: 3em;
+    line-height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header p{
+    font-size: 1.5em;
+    color: white;
+    align-self: flex-start;
+}
+
+.header .home {
+position: absolute;
+    height: 1.5em;
+    left: 1.5em;
+    top: 0.5em;
+}
+.content .victory {
+    height: 11em;
+    margin: 3em;
+    color: white;
+}
+.victory .remain{
+    margin-top: 1em;
+    height: 4em;
+}
+.victory img {
+    height: 10em;   
+}
+
+.victory p {
+    font-size: 1em;
+    color: white;
+    float: left;
+    width:30%;
+    margin:0 1em;
+}
+.victory .players{
+    display:block;
+    float: none;
+    width: 50%;
+    margin-left: 1em;
+}
+.content .result {
+    margin: 1em 3.5em;
+}
+
+.content {
+    padding: 0.5em 0;
+}
+
+.result p {
+    color: white;
+    margin: 0.25em 0;
+}
+.details{
+    overflow-y: scroll;
+    margin-bottom: 4em;
+}
+.day {
+    padding: 0.5em 2em;
+    border-bottom: 1px solid rgb(177, 177, 179);
+}
+
+.day .date {
+    font-size: 1.5em;
+    display: inline;
+}
+
+.day small {
+    float: right;
+    color: rgb(192, 189, 189);
+}
+
+.day p {
+    color: rgb(192, 189, 189);
+}
+.footer {
+    height: 3em;
+    background: rgba(41, 189, 224, 0.5);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.footer span {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 5px;
+    width: 70%;
+    color: white;
+}
+
+.footer .more {
+    background: rgb(246, 111, 111);
+}

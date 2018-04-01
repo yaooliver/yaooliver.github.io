@@ -1,0 +1,154 @@
+body{
+    background: #81e6f3!important;
+}
+.header {
+    height: 4em;
+    background: #81e6f3;
+    text-align: center;
+    line-height: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.51em;
+}
+
+.header .pic1 {
+    height: 52px;
+    width: 51px;
+    background-image: url(素材/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    zoom: 0.8;
+    /* margin: 1em; */
+}
+
+.header span {
+    font-size: 2em;
+    color: white;
+    /* margin: 0 -10px; */
+}
+
+.header .pic2 {
+    height: 52px;
+    width: 38px;
+    background-image: url(素材/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -39px 11px;
+    zoom: 0.8;
+    /* margin: 1em; */
+}
+
+.vote {
+    /* margin-top: 4em; */
+    height: 4em;
+    background: #b9e9f5;
+    margin: 4em -15px 0 -15px;
+    line-height: 4em;
+}
+
+.vote p {
+    margin-left: 4em;
+    display: inline;
+}
+
+.vote .player {
+    height: 2em;
+    width: 2em;
+    float: right;
+    margin: 1em 2em;
+    border-radius: 100%;
+    background: chocolate;
+    line-height: 2em;
+    text-align: center;
+    padding-top: 0.17em;
+    padding-left: 0.19em;
+}
+
+.vote .player span {
+    font-size: 1.22em;
+    color: rgb(255, 255, 255);
+}
+
+.arrows {
+    height: 0;
+    width: 0;
+    margin-left: 4em;
+    border-top: #b9e9f5 1em solid;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+}
+
+.words {
+    color: rgb(150, 147, 147);
+    margin-left: 3em;
+}
+/* .container{
+    padding: 0;
+    margin: 0;
+} */
+.container .box{
+    /* background:#2d2f30; */
+    width: 100%;
+    height: 7em;
+    margin: 25% 0; 
+    margin-left:-15px;
+}
+.row {
+    padding-left: 25px;
+    /* width: 100%; */
+    margin: 0;
+}
+.container .box1{
+    height: 5em;
+    background: chocolate;
+    line-height: 5em;
+    text-align: center;
+}
+.box1 p{
+    font-size:2em;
+}
+.container .box2{
+    height: 2em;
+    background: rgb(74, 146, 112);
+    text-align: center;
+    line-height: 2em;
+    color: white;
+}
+.container .box3{
+    height: 2em;
+    /* background: white; */
+    margin-top:0.5em;
+    display: none;
+}
+ .box:hover .box3{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.container .box3 div{
+    background: white;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    /* padding: 10px; */
+}
+.container .box3 img{
+    width: 10px;
+}
+.content{
+    margin-bottom: 7em;
+}
+.footer{
+    height: 5em;
+    text-align: center;
+    line-height: 5em;
+    background:#81e6f3;
+}
+.footer .button{
+    width: 70%;
+    height: 100%;
+    color: white;
+    font-size: 2.7em;
+    background: chocolate;
+}

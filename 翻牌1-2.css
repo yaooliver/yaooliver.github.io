@@ -79,13 +79,15 @@ body {
     height: 28%;
     margin-top: 2.7em;
 }
-
-.border p {
+.border .king{
+    height: 40%;
+    margin-top: 8.6em;
+}
+.border p{
     font-size: 1.1em;
     margin: 0.7em auto;
-    color: rgb(8, 126, 173);
+    color:rgb(8, 126, 173);
 }
-
 .footer {
     height: 2em;
     width: 80%;

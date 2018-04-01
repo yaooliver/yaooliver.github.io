@@ -11,6 +11,9 @@ var newSet = function () {
     var typeIn = $('#input').val();
     var a = $('.changeKiller').html();
     var b = $('.changeNormal').html();
+    $('.changeKiller').html("");
+    $('.changeNormal').html("");
+    $('#input').val("");
     if (3 < typeIn && typeIn <= 5) {
         var a = 1;
     } else if (6 <= typeIn && typeIn <= 8) {
@@ -23,23 +26,29 @@ var newSet = function () {
         var a = 5;
 
     } else {
-        $('.changeKiller').html("");
-        $('.changeNormal').html("");
-        $('#input').val("");
+        $('.shift').html("玩家数量只能为4-18")
+        $('#myModal').modal('show');
 
     } //分情况分配杀手的人数
-    if (a) {
+    $('.set').click(function () {
+        if (a) {
         var b = typeIn - a;
         $('.changeKiller').html(a);
         $('.changeNormal').html(b);
-        $('#input').val(typeIn);
-    };//输入符合调教，就给杀手和平民赋值人数
+           
+        };//输入符合调教，就给杀手和平民赋值人数
+    })
+    
+   
 };
 
-$('#input').keyup(function () {
+$('#input').blur(function () {
     var typeIn = $('#input').val();
     var a = $('.changeKiller').html();
     var b = $('.changeNormal').html();
+    $('.changeKiller').html("");
+    $('.changeNormal').html("");
+    $('#input').val("");
     var newPos = new Object();
     newPos.top = $('.point').offset().top;
     if (3 < typeIn && typeIn <= 5) {
@@ -53,11 +62,9 @@ $('#input').keyup(function () {
     } else if (16 <= typeIn && typeIn < 19) {
         var a = 5;
     } else {
-        $('.changeKiller').html("");
-        $('.changeNormal').html("");
-        $('#input').val("");
+        $('.shift').html("玩家数量只能为4-18")
+        $('#myModal').modal('show');
         newPos.left = h;
-        console.log(newPos.left);
         $('.point').offset(newPos);
         return false;
     }
@@ -94,9 +101,9 @@ $('.plus').click(function () {
     if (typeIn > 18) {
         typeIn = 18
     }
-    $('#input').val(typeIn);
+    
     newSet(typeIn);
-
+$('#input').val(typeIn);
 });
 $('.minus').click(function () {
     var typeIn = $('#input').val();
@@ -117,9 +124,8 @@ $('.minus').click(function () {
         typeIn = 4
         return false;
     };
-    $('#input').val(typeIn);//同时输入框的值相应变化
     newSet(typeIn);
-
+    $('#input').val(typeIn);
 });
 
 
@@ -158,6 +164,7 @@ function move(event) {
     $('#input').val(s + 4);
     typeIn = s + 4;
     newSet(typeIn);
+    $('#input').val(typeIn);
     return false;
 };
 $(document).on('touchend', function () {
@@ -207,16 +214,23 @@ $('.go').click(function () {
         var nextPage = JSON.stringify(new_num1);
         sessionStorage.setItem("key", nextPage); //把洗好的数组保存，待后面的页面取用
         if (check) {
-             window.location.href = "翻牌1.html" //跳转
+             window.location.href = "翻牌1-2.html" //跳转
         }
-       
+        var p = JSON.parse(nextPage)
+        console.log(nextPage)
+    //    console.log(P)
 
     } else {
         $('#myModal').modal('show');
     }
 })
-
 $('.canel,.confirm').click(function () { //点完弹窗按钮后弹窗要消失
     $('#myModal').modal('hide');
     location.reload();//弹窗出现表示不符合条件，为了省事，确认弹窗后页面刷新
 });
+var test = localStorage.getItem("test") || 0;
+console.log("test=" + test);
+
+window.onunload = function () {
+    localStorage.setItem("test", (test - 0 + 1));
+}
