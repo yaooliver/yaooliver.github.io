@@ -36,7 +36,7 @@ var guess = function () {
         console.log(1111111)
         bootbox.confirm("游戏结束，看看游戏结果", function (result) {
             if (result) {
-                window.location.href="index.html"
+                window.location.href="结果页.html"
             }
          });
     }
@@ -53,11 +53,7 @@ var guess = function () {
            sessionStorage.setItem("killdata", JSON.stringify(killdata));
            if ($.inArray("1", roles) == -1 || $.inArray("0", roles) == -1) {
                console.log(1111111)
-               bootbox.confirm("游戏结束，看看游戏结果", function (result) {
-                   if (result) {
-                       window.location.href = "index.html"
-                   } 
-               });
+               guess()
            }else {
                        window.location.href = "法官台本.html"
                    }
@@ -71,11 +67,7 @@ var guess = function () {
            sessionStorage.setItem("killdata", JSON.stringify(killdata));
            if ($.inArray("1", roles) == -1 || $.inArray("0", roles) == -1) {
                console.log(1111111)
-               bootbox.confirm("游戏结束，看看游戏结果", function (result) {
-                   if (result) {
-                       window.location.href = "index.html"
-                   } 
-               });
+               guess()
            }else {
                        window.location.href = "法官台本.html"
                    }
@@ -89,11 +81,7 @@ var guess = function () {
            sessionStorage.setItem("killdata", JSON.stringify(killdata));
            if ($.inArray("1", roles) == -1 || $.inArray("0", roles) == -1) {
                console.log(1111111)
-               bootbox.confirm("游戏结束，看看游戏结果", function (result) {
-                   if (result) {
-                       window.location.href = "index.html"
-                   } 
-               });
+               guess()
            }else {
                         window.location.href = "法官台本.html"
                    }
