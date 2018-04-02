@@ -1,6 +1,3 @@
-window.onresize = function () {
-    location.reload();
-}
 $(window).load(function () {　　
     h = $('.point').offset().left;
 });
