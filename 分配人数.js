@@ -124,8 +124,6 @@ $('.minus').click(function () {
     newSet(typeIn);
     $('#input').val(typeIn);
 });
-
-
 $('#input').focusin(function () {
     $(this).addClass("new"); //输入框得到焦点就变黄色
 });
@@ -140,7 +138,6 @@ $('.point').on('touchstart', function (event) {
     console.log(x1);
     return false;
 });
-
 function move(event) {
     event.preventDefault();
     var typeIn = $('#input').val();
@@ -165,8 +162,39 @@ function move(event) {
     return false;
 };
 $(document).on('touchend', function () {
-    // event.preventDefault();
+    event.preventDefault();
     $(document).unbind('touchmove', move);
+});
+
+$('.point').mousedown(function () {
+    x1 = event.pageX - $('.point').offset().left;
+    $(document).bind('mousemove', move1);
+    return false;
+})
+function move1(event) {
+    console.log(222222)
+    var typeIn = $('#input').val();
+    var a = $('.changeKiller').html();
+    var b = $('.changeNormal').html();
+    newPos = new Object();
+    newPos.left = Math.round((event.pageX - x1) / 15) * 15;
+    newPos.top = $('.point').offset().top;
+    if (newPos.left - h < 0) {
+        newPos.left = h
+    }
+    if (newPos.left - h > 210) {
+        newPos.left = h + 210
+    }
+    $('.point').offset(newPos);
+    s = Math.round((newPos.left - h) / 15);
+    $('#input').val(s + 4);
+    typeIn = s + 4;
+    newSet(typeIn);
+    $('#input').val(typeIn);
+    return false;
+};
+$(document).mouseup( function () {
+    $(document).unbind('mousemove', move1);
 });
 //下面是词组正则验证，我自己加了“长度不少于6位”“不能含有空格”“两组词不能相同”3个要求
 $('.go').click(function () {

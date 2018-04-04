@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <script src="bs/js/jquery.min.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="bs/js/docs.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-heaer">jquey折叠效果</h1>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#">点我显示1</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#">点我显示2</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#">点我显示3</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！你看不见我！
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    $('.panel-body').hide().first().show();
+    $('.panel-title').click(function () {
+        $(this).parent().next().toggle(300);
+        $('.panel-body').not($(this).parent().next()).slideUp(300);
+    });
+</script>
+
+</html>

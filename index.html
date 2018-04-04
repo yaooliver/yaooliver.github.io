@@ -5,80 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="桌游精灵4.css">
-    <script src="素材/bs/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="素材/bs/css/bootstrap-theme.css">
     <link rel="stylesheet" href="素材/bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="素材/bs/js/jquery.min.js"></script>
     <script src="素材/bs/js/bootstrap.min.js"></script>
-
-    <title>桌游精灵玩家配比</title>
+    <title>Oliver的demo</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="header navbar-fixed-top">
-            <img src="素材/back.png" alt="" class="back"> 参数设置
-            <img src="素材/help.png" alt="" class="help">
+    <div class="container">
+        <h1 class="page-header">demo展示
+            <small>oliver</small>
+        </h1>
+        <div class="col-sm-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <a>返回顶部和一键到底</a>
+                </li>
+                <li>
+                    <a>鼠标拖拽</a>
+                </li>
+                <li>
+                    <a>留言板</a>
+                </li>
+                <li>
+                    <a>折叠效果</a>
+                </li>
+                <li>
+                    <a>表单验证</a>
+                </li>
+                <li>
+                    <a>九宫格跑马灯</a>
+                </li>
+                <li class="active">
+                    <a>手机桌游杀手游戏</a>
+                </li>
+            </ul>
         </div>
-
-        <div class="name">
-            <p>玩</br>家</br>配</br>比</p>
-        </div>
-
-        <div class="players">
-            <div class="killer">
-                <span class="glyphicon glyphicon-user"></span>杀手
-                <p class="changeKiller"></p>人
-            </div>
-            <div class="normal">
-                <span class="glyphicon glyphicon-user"></span>平民
-                <p class="changeNormal"></p>人
-            </div>
-        </div>
-        <div class="more">
-            <span class="set">点击设置</span>
-            <img src="素材/pencil.png" alt="">
-        </div>
-        <div class="setWords">
-            <input class="citizen" type="text" placeholder=" 水民词组">
-            <input class="ghost" type="text" placeholder=" 幽灵词组">
-
-        </div>
-        <div class="typeIn">
-            <p class="num">请输入玩家数量</p>
-            <input id="input" type="number" oninput="if(value.length>2)value=value.slice(0,2)" value="">
-            <p class="limit">玩家数量为4-18</p>
-        </div>
-        <div class="control">
-            <div class="slide">
-                <span class="glyphicon glyphicon-minus-sign minus"></span>
-                <span class="glyphicon glyphicon-plus-sign plus"></span>
-
-                <div class="line">
-                    <div class="point"></div>
+        <div class="col-sm-10">
+            <div class="show">
+                <div class="details">
+                    <p>在返回顶部按钮基础上加上一键到底按钮，可应用于不看正文快速无脑评论。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
                 </div>
             </div>
-        </div>
-        <div class="footer navbar-fixed-bottom">
-            <div class="go">
-                <p>去发牌</p>
-            </div>
-        </div>
-    </div>
-    <div id="myModal" class="modal fade bs-example-modal-sm">
-        <div class="modal-dialog" style="width:60%;margin:20em auto">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p class="shift">请输入正确玩家数量</p>
+            <div class="show">
+                <div class="details">
+                    <p>PC端鼠标拖拽效果。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default confirm">确认</button>
-                    <button class="btn btn-default cancel">取消</button>
+            </div>
+            <div class="show">
+                <div class="details">
+                    <p>bootstrap下模拟社交网站评论效果。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
+                </div>
+            </div>
+            <div class="show">
+                <div class="details">
+                    <p>Jquery模拟网站常用百叶窗效果。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
+                </div>
+            </div>
+            <div class="show">
+                <div class="details">
+                    <p>模拟常用网站注册界面验证效果。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
+                </div>
+            </div>
+            <div class="show">
+                <div class="details">
+                    <p>原生JS操作练习。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
+                </div>
+            </div>
+            <div class="show">
+                <div class="details">
+                    <p>html/css/js复刻简单手游.使用Jquery框架，同时融合了上面几个小demo的知识，又新增了有限状态机等知识点。手机演示效果更佳。</p>
+                    <button class="btn btn-primary link">点我浏览</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="分配人数.js"></script>
+<script src="demo.js"></script>
 
 </html>

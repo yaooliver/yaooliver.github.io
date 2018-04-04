@@ -8,7 +8,13 @@ $(window).load(function () {
     $('#deliver').hide();
     $('#watch').show();
 })
-
+$('.close').click(function () {
+    bootbox.confirm("确定要结束游戏吗？", function (result) {
+        if (result) {
+            window.location.href = "杀手游戏.html"
+        }
+    });
+  })
 $('.footer').click(function () {
     var a = parseInt($('.number').html());
     if ($('.role').is(':hidden')) {

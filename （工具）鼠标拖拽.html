@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标拖拽</title>
+    <script src="jquery.min.js"></script>
+    <style>
+       
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .all {
+            height: 800px;
+            width: 1000px;
+            position: relative;
+            /* background: red; */
+        }
+         #move {
+            height: 300px;
+            width: 300px;
+            border-radius: 300px;
+            background-color: #cccccc;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div id="move">
+            <img src="2.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+<script>
+    function drag(obj) {
+        obj.mousedown(function (event) {
+            x1 = event.clientX - obj.position().left;
+            y1 = event.clientY - obj.position().top;
+            $(document).bind('mousemove', move);
+            // return false;
+        });
+
+        function move(event) {
+ var t=event.clientX - x1
+            obj.css({
+                'left': t + 'px',
+                'top': event.clientY - y1 + 'px'
+            });
+            console.log(t)
+            return false;
+        }
+        $(document).mouseup(function () {
+            $(document).unbind('mousemove', move);
+        })
+
+    }
+    obj = $('#move');
+    drag(obj)
+</script>
+
+</html>

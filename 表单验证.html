@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style>
+        .error{
+            color: red;
+            display: none;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<form action="reg.php" method="get">
+    <p>用户名：</p>
+    <p><input type="text" name="username" class="check"> <span class="error">用户名至少6位！</span></p>
+
+    <p>密码：</p>
+    <p><input type="password" name="password" class="check"> <span class="error">密码至少8位！</span></p>
+
+    <p>确认密码：</p>
+    <p><input type="password" name="repassword" class="check"> <span class="error">两次密码不一致！</span></p>
+
+    <p>手机号：</p>
+    <p><input type="text" name="phone" class="check" maxlength="11"> <span class="error">手机号码格式不正确！</span></p>
+
+    <p>邮箱地址：</p>
+    <p><input type="text" name="email" class="check"> <span class="error">邮箱地址格式不正确！</span></p>
+
+    <p><input type="submit" value="提交"></p>
+
+</form>
+</body>
+<script>
+    $('input[name=username]').blur(function () {
+        val=this.value;
+        if (val.length<6){
+            $(this).data({'s':0});
+            $(this).next().show();
+        }else {
+            $(this).data({'s':1});
+            $(this).next().hide();
+        }
+    });
+    $('input[name=password]').blur(function () {
+        val=this.value;
+        if (val.length<8){
+            $(this).data({'s':0});
+            $(this).next().show();
+        }else {
+            $(this).data({'s':1});
+            $(this).next().hide();
+        }
+    });
+    $('input[name=repassword]').blur(function () {
+        val1=this.value;
+        val2=$('input[name=password]').val();
+        if(val1!==val2){
+            $(this).data({'s':0});
+            $(this).next().show();
+        }else {
+            $(this).data({'s':1});
+            $(this).next().hide();
+        }
+    });
+
+    $('input[name=phone]').blur(function () {
+        val=this.value;
+        if (!val.match(/^1\d{10}/)){
+            $(this).data({'s':0});
+            $(this).next().show();
+        }else {
+            $(this).data({'s':1});
+            $(this).next().hide();
+        }
+    });
+
+    $('input[name=email]').blur(function () {
+        val=this.value;
+        if (!val.match(/^\w+@\w+\.\w+$/i)){
+            $(this).data({'s':0});
+            $(this).next().show();
+        }else {
+            $(this).data({'s':1});
+            $(this).next().hide();
+        }
+    });
+
+    $('form').submit(function () {
+        $('.check').blur();
+        tot=0;
+        $('.check').each(function () {
+            tot+=$(this).data('s');
+
+
+        });
+        if(tot!==5){
+            return false;
+        }
+
+    });
+
+</script>
+</html>
