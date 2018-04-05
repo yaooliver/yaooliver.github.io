@@ -6,8 +6,6 @@
     <title>鼠标拖拽</title>
     <script src="jquery.min.js"></script>
     <style>
-       
-
         img {
             width: 300px;
             height: 300px;
@@ -19,7 +17,8 @@
             position: relative;
             /* background: red; */
         }
-         #move {
+
+        #move {
             height: 300px;
             width: 300px;
             border-radius: 300px;
@@ -47,21 +46,36 @@
         });
 
         function move(event) {
- var t=event.clientX - x1
+            var t = event.clientX - x1
             obj.css({
                 'left': t + 'px',
                 'top': event.clientY - y1 + 'px'
             });
-            console.log(t)
+            // console.log(t)
             return false;
         }
         $(document).mouseup(function () {
             $(document).unbind('mousemove', move);
         })
-
     }
     obj = $('#move');
-    drag(obj)
+    drag(obj) //以上PC端代码
+    $('#move').on('touchstart', function (event) {
+        x1 = event.originalEvent.touches[0].pageX - $('#move').position().left;
+        y1 = event.originalEvent.touches[0].pageY - $('#move').position().top;
+        console.log(x1, y1);
+        $(document).bind('touchmove', move1);
+    });
+
+    function move1(event) {
+        $('#move').css({
+            'left': event.originalEvent.touches[0].pageX - x1 + 'px',
+            'top': event.originalEvent.touches[0].pageY - y1 + 'px'
+        });
+    }
+    $(document).on('touchend', function () {
+        $(document).unbind('touchmove', move1);
+    })
 </script>
 
 </html>

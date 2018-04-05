@@ -8,9 +8,10 @@ var newSet = function () {
     var typeIn = $('#input').val();
     var a = $('.changeKiller').html();
     var b = $('.changeNormal').html();
-    $('.changeKiller').html("");
-    $('.changeNormal').html("");
-    $('#input').val("");
+    // $('.changeKiller').html("");
+    // $('.changeNormal').html("");
+    // $('#input').val("");
+     console.log(typeIn)
     if (3 < typeIn && typeIn <= 5) {
         var a = 1;
     } else if (6 <= typeIn && typeIn <= 8) {
@@ -21,22 +22,18 @@ var newSet = function () {
         var a = 4;
     } else if (16 <= typeIn && typeIn < 19) {
         var a = 5;
-
     } else {
         $('.shift').html("玩家数量只能为4-18")
         $('#myModal').modal('show');
-
     } //分情况分配杀手的人数
+      console.log(a)
     $('.set').click(function () {
         if (a) {
         var b = typeIn - a;
         $('.changeKiller').html(a);
-        $('.changeNormal').html(b);
-           
-        };//输入符合调教，就给杀手和平民赋值人数
-    })
-    
-   
+        $('.changeNormal').html(b);      
+        };//输入符合条件，就给杀手和平民赋值人数
+    })  
 };
 
 $('#input').blur(function () {
@@ -81,8 +78,6 @@ $('#input').blur(function () {
 //下面则是点击加号减号按钮改变输入的值大小同时改变滑块按钮的位置
 $('.plus').click(function () {
     var typeIn = $('#input').val();
-    var a = $('.changeKiller').html();
-    var b = $('.changeNormal').html();
     if (typeIn == "") {
         typeIn = 4;//这里强行让输入框的值等于4，防止如果输入的值不符合条件，会影响后面输入框值变化的运算
         $('#input').val(typeIn);
@@ -94,18 +89,15 @@ $('.plus').click(function () {
         newPos.left = h + 210
     }//这里多滑块的最右端做了限制，不让它超出导轨的长度
     $('.point').offset(newPos);
-    typeIn++;
+    ++typeIn;
     if (typeIn > 18) {
         typeIn = 18
-    }
-    
+    }    
+    $('#input').val(typeIn);
     newSet(typeIn);
-$('#input').val(typeIn);
 });
 $('.minus').click(function () {
     var typeIn = $('#input').val();
-    var a = $('.changeKiller').html();
-    var b = $('.changeNormal').html();
     newPos = new Object();
     newPos.left = $('.point').offset().left - 15;
     newPos.top = $('.point').offset().top;
@@ -116,13 +108,13 @@ $('.minus').click(function () {
 
     $('.point').offset(newPos);
     console.log($('.point').offset());
-    typeIn--;
+    --typeIn;
     if (typeIn < 4) {
         typeIn = 4
         return false;
     };
-    newSet(typeIn);
     $('#input').val(typeIn);
+    newSet(typeIn);
 });
 $('#input').focusin(function () {
     $(this).addClass("new"); //输入框得到焦点就变黄色
