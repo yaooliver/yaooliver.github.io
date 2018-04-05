@@ -162,7 +162,6 @@ function move(event) {
     return false;
 };
 $(document).on('touchend', function () {
-    event.preventDefault();
     $(document).unbind('touchmove', move);
 });
 
